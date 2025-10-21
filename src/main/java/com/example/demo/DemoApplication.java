@@ -1,4 +1,4 @@
-package com.example.demo;
+package co.edu.eci.lambda.springrest;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
