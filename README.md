@@ -190,3 +190,25 @@ Finalmente la implementación local quedó así:
 <img width="1364" height="348" alt="image" src="https://github.com/user-attachments/assets/38cc2e00-07da-4eb8-8590-79b3e15d180f" />
 
 ### Despliegue en AWS
+
+Servidor Lucassecuencia1 en puerto 8081 corriendo en aws:
+<img width="1364" height="543" alt="image" src="https://github.com/user-attachments/assets/26b41554-0e87-40d8-907b-ad7c5d468826" />
+
+Servidor Lucassecuencia2 en puerto 8082 (para esto modifiqué el application.properties de esta instancia) corriendo en aws:
+<img width="1364" height="591" alt="image" src="https://github.com/user-attachments/assets/b8b020c4-df5c-4000-ae8a-ddf01208486e" />
+
+Servidor proxy en puerto 8080 corriendo en aws:
+<img width="1365" height="589" alt="image" src="https://github.com/user-attachments/assets/63a93b18-3eeb-4af7-bdd5-f43250c96717" />
+
+Ya teniendo estas 3 instancias creadas y corriendo sobre AWS, lo único que tengo que hacer es abrir la dirección IP del servidor proxy en su puerto 8080, recordando que la ip se muestra en los detalles de la instancia:
+
+<img width="1062" height="477" alt="image" src="https://github.com/user-attachments/assets/ea8b11ff-d74d-47a4-a32f-dd4ff0500a5f" />
+
+Al abrir la dirección IP puedo ver mi aplicación:
+<img width="1365" height="248" alt="image" src="https://github.com/user-attachments/assets/a1a71342-3d89-4fea-a5cc-3ecf3cacf569" />
+
+Para que finalmente funcione, hay que modificar las direcciones de las instancias lucassecuencia de localhost a la dirección IP de cada instancia:
+<img width="1365" height="532" alt="image" src="https://github.com/user-attachments/assets/c7014867-6055-4939-bfea-fa8e3fb9faf7" />
+
+Al probarla:
+<img width="1365" height="286" alt="image" src="https://github.com/user-attachments/assets/45554160-8530-4031-851f-610a93948b80" />
