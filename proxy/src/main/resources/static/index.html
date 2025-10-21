@@ -8,14 +8,15 @@
 <body>
 <h1>Secuencia de Lucas</h1>
 <form action="/lucassec">
-<label for="value">Valor:</label><br>
-<input type="text" id="value" name="value" value="10"><br><br>
-<input type="button" value="Calcular" onclick="loadPostMsg(value)">
+<label for="valueInput">Valor:</label><br>
+<input type="text" id="valueInput" name="value" value="10"><br><br>
+<input type="button" value="Calcular" onclick="loadPostMsg()">
 </form>
 <div id="postrespmsg"></div>
 <script>
-function loadPostMsg(value){
-let url = "/lucassec?value=" + value.value;
+function loadPostMsg(){
+let valueInput = document.getElementById("valueInput").value;
+let url = "/lucassec?value=" + valueInput;
 fetch (url, {method: 'POST'})
 .then(x => x.text())
 .then(y => document.getElementById("postrespmsg").innerHTML = y);

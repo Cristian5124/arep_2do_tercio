@@ -44,7 +44,13 @@ public class ProxyController {
       in.close();
       return result;
     } catch (Exception e) {
-      return "{\"status\":\"error\",\"result\":\"Error\"}";
+      return (
+        "{\"status\":\"error\",\"result\":\"Error: " +
+        e.getMessage() +
+        " - Server: " +
+        server +
+        "\"}"
+      );
     }
   }
 }
